@@ -27,19 +27,13 @@ public class UserDao {
         //如果返回user为null，说明数据库里没有该用户信息，即用户名或密码错误
         //user不为null，则输入正确
         User user = runner.query(conn,sql,new BeanHandler<User>(User.class),name,pwd);
-
         // 4.关闭连接对象
         DBHelper.close(conn);
-
         // 5.返回user
         return user;
     }
-    /**
-     * 修改密码
-     * @param id  需要修改密码的用户编号
-     * @param pwd  新的密码
-     * @return  修改的数据行
-     */
+
+    //修改密码
     public int modifyPwd(long id,String pwd) throws SQLException {
         String sql="update  user set pwd = ? where id=?";
         Connection conn = DBHelper.getConnection();
@@ -47,7 +41,6 @@ public class UserDao {
         DBHelper.close(conn);
         return count;
     }
-
 
     //测试
     public static void main(String[] args) {
