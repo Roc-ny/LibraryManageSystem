@@ -3,14 +3,7 @@ package com.lms.librarymanagesystem.bean;
 
 import java.io.Serializable;
 
-/**
- * 保存用户的信息
- * 1.Serializable
- * 2.私有的属性
- * 3.getter/setter
- * 4.默认的构造
- *
- */
+//用户实体类表
 public class User implements Serializable {
   @Override
   public String toString() {
