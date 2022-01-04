@@ -20,6 +20,7 @@ import java.util.Random;
  */
 @WebServlet(urlPatterns = "/code.let",loadOnStartup = 1)
 public class ValCodeServlet extends HttpServlet {
+
         Random random =new Random();
     /**
      * 获取随机字符串
